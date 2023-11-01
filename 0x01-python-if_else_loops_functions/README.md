@@ -9,3 +9,5 @@
 8-uppercase.py changes to upper
 9-print_last_digit.py prints the last digit
 10-add.py adds
+11-pow.py computes power
+12-fizzbuzz.py prints 1 to 100
