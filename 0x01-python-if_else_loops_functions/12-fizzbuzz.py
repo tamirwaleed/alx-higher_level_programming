@@ -11,4 +11,4 @@ def fizzbuzz():
             else:
                 print("{}".format(i), end=" ")
         else:
-            print("Fizzbuzz")
+            print("Buzz")
