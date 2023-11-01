@@ -6,3 +6,4 @@
 5-print_comb2.py prints from 0 to 99
 6-print_comb3.py prints combination
 7-islower.py checks for lower
+8-uppercase.py changes to upper
