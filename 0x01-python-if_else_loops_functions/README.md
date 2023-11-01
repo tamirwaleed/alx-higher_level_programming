@@ -7,3 +7,5 @@
 6-print_comb3.py prints combination
 7-islower.py checks for lower
 8-uppercase.py changes to upper
+9-print_last_digit.py prints the last digit
+
