@@ -12,3 +12,5 @@
 11-pow.py computes power
 12-fizzbuzz.py prints 1 to 100
 100-print_tebahpla.py writes the tebahpla
+101-remove_char_at.py removes at
+102-magic_calculation.py breaks down bytecode
