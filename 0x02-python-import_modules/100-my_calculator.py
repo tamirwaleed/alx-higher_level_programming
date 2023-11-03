@@ -7,13 +7,13 @@ def calcu(argv):
     else:
         a, b = argv[1], argv[3]
         if argv[2] == '+':
-            print("{} + {} = {}".format(a, b, int(a) + int(b))
+            print("{} + {} = {}".format(a, b, int(a) + int(b)))
         elif argv[2] == '-':
-            print("{} - {} = {}".format(a, b, int(a) - int(b))
-        elif argv[2] == '-':
-            print("{} - {} = {}".format(a, b, int(a) - int(b))
-        elif argv[2] == '-':
-            print("{} - {} = {}".format(a, b, int(a) - int(b))
+            print("{} - {} = {}".format(a, b, int(a) - int(b)))
+        elif argv[2] == '*':
+            print("{} * {} = {}".format(a, b, int(a) * int(b)))
+        elif argv[2] == '/':
+            print("{} / {} = {}".format(a, b, int(a) / int(b)))
         else:
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
@@ -21,4 +21,4 @@ def calcu(argv):
 
 if __name__ == "__main__":
     import sys
-    calcu(sys.agrv)
+    calcu(sys.argv)
