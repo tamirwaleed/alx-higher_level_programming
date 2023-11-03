@@ -8,6 +8,8 @@ def funno(argv):
         print("{} arguments:".format(len(argv) - 1))
         for i in range(1, len(argv)):
             print("{:d}: {:s}".format(i, argv[i]))
-if __name__ == "__main__":  
+
+
+if __name__ == "__main__":
     import sys
     funno(sys.argv)
