@@ -5,15 +5,15 @@ def calcu(argv):
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
     else:
-        a, b = argv[1], argv[3]
+        a, b = int(argv[1]), int(argv[3])
         if argv[2] == '+':
-            print("{} + {} = {}".format(a, b, int(a) + int(b)))
+            print("{} + {} = {}".format(a, b, a + b))
         elif argv[2] == '-':
-            print("{} - {} = {}".format(a, b, int(a) - int(b)))
+            print("{} - {} = {}".format(a, b, a - b))
         elif argv[2] == '*':
-            print("{} * {} = {}".format(a, b, int(a) * int(b)))
+            print("{} * {} = {}".format(a, b, a * b))
         elif argv[2] == '/':
-            print("{} / {} = {}".format(a, b, int(a) / int(b)))
+            print("{} / {} = {}".format(a, b, a / b))
         else:
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
