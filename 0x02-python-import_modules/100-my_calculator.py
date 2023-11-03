@@ -10,10 +10,10 @@ def calcu(argv):
             print("{} + {} = {}".format(a, b, a + b))
         elif argv[2] == '-':
             print("{} - {} = {}".format(a, b, a - b))
-        elif argv[2] == '*':
-            print("{} * {} = {}".format(a, b, a * b))
         elif argv[2] == '/':
             print("{} / {} = {}".format(a, b, a / b))
+        elif argv[2] == '*':
+            print("{} * {} = {}".format(a, b, a * b))
         else:
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
