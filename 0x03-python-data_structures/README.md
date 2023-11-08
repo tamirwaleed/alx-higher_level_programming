@@ -3,3 +3,4 @@
 2-replace_in_list.py replaces
 3-print_reversed_list_integer.py prints reversed
 4-new_in_list.py replaces
+5-no_c.py removes Cc
