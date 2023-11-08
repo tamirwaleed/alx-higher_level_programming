@@ -5,3 +5,4 @@
 4-new_in_list.py replaces
 5-no_c.py removes Cc
 6-print_matrix_integer.py prints matrix
+7-add_tuple.py adds two tuples
