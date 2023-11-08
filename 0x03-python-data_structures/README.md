@@ -4,3 +4,4 @@
 3-print_reversed_list_integer.py prints reversed
 4-new_in_list.py replaces
 5-no_c.py removes Cc
+6-print_matrix_integer.py prints matrix
