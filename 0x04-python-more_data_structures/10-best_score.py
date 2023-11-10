@@ -7,5 +7,5 @@ def best_score(a_dictionary):
             if a_dictionary[x] > maxo:
                 maxo, who = a_dictionary[x], x
         return (who)
-    else: 
+    else:
         return None
