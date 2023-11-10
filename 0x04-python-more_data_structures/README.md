@@ -4,3 +4,4 @@
 3-common_elements.py returns a set of common elements
 4-only_diff_elements.py returns a set of diff elements
 5-number_keys.py returns the number of keys
+6-print_sorted_dictionary.py sorts out
