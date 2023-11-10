@@ -8,3 +8,4 @@
 7-update_dictionary.py updates dic
 8-simple_delete.py deletes
 9-multiply_by_2.py multiplies
+10-best_score.py returns a key with the biggest
