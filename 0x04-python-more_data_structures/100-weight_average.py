@@ -5,6 +5,6 @@ def weight_average(my_list=[]):
         for x, y in my_list:
             nume += x * y 
             den += y
-        return (avg = nume / den)
+        return (nume / den)
     else:
         return 0
