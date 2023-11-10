@@ -12,3 +12,4 @@
 11-multiply_list_map.py multiplies
 12-roman_to_int.py converts roman to int
 100-weight_average.py weighted average
+101-square_matrix_map.py squares
