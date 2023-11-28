@@ -59,4 +59,3 @@ class Rectangle:
             x = x + "\n"
         x = x[:-1]
         return (x)
-                
