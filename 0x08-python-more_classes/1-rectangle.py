@@ -13,6 +13,7 @@ class Rectangle:
     def width(self):
         ''' Width prop '''
         return self.__width
+
     @width.setter
     def width(self, value):
         ''' Setter '''
@@ -26,6 +27,7 @@ class Rectangle:
     def height(self):
         ''' Height prop '''
         return self.__height
+
     @height.setter
     def height(self, value):
         ''' Setter '''
