@@ -62,6 +62,6 @@ class Rectangle:
 
     def __repr__(self):
         ''' Why document '''
-        r = "Rectangle(" + str(self.__width) + ","
-        r += "" + str(self.__height) + ")"
-        return (r)
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
+        return (rect)
