@@ -60,7 +60,7 @@ class Rectangle:
             return (x)
         for i in range(h):
             for j in range(w):
-                x = x + Rectangle.print_symbol
+                x = x + str(Rectangle.print_symbol)
             x = x + "\n"
         x = x[:-1]
         return (x)
