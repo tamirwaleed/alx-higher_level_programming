@@ -6,6 +6,7 @@ class Rectangle:
     ''' The class '''
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         ''' Initialization '''
@@ -59,7 +60,7 @@ class Rectangle:
             return (x)
         for i in range(h):
             for j in range(w):
-                x = x + "#"
+                x = x + Rectangle.print_symbol
             x = x + "\n"
         x = x[:-1]
         return (x)
