@@ -3,7 +3,7 @@
 
 
 def add_attribute(obj, attr, value):
-    ''' the function 
+    ''' the function
     Args:
         obj (any)
         attr (string)
