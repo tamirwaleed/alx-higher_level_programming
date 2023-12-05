@@ -2,7 +2,7 @@
 ''' adds attribute '''
 
 
-def addattrib_(obj, attr, value):
+def add_attrib_(obj, attr, value):
     ''' the function 
     Args:
         obj (any)
