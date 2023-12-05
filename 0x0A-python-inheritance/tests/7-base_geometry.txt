@@ -81,3 +81,6 @@ Traceback (most recent call last):
   File "/root/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 13, in integer_validator
     raise TypeError("{} must be an integer".format(name))
 TypeError: tamir must be an integer
+>>> tam.integer_validator({"a": 1}, (1, 2))
+Traceback (most recent call last):
+TypeError: {'a': 1} must be an integer
