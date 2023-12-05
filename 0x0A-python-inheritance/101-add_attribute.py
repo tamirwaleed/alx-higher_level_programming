@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 ''' adds attribute '''
 
+
 def addattrib_(obj, attr, value):
     ''' the function '''
     if not hasattr(obj, "__dict__"):
