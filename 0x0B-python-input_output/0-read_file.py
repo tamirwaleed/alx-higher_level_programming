@@ -5,5 +5,4 @@
 def read_file(filename=""):
     ''' Function '''
     with open(filename) as fd:
-        f = fd.read()
-    print(f, end="")
+        print(fd.read(), end="")
