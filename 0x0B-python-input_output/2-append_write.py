@@ -5,4 +5,4 @@
 def append_write(filename="", text=""):
     ''' The Function '''
     with open(filename, 'a') as fd:
-        (fd.append(text))
+        return (fd.write(text))
