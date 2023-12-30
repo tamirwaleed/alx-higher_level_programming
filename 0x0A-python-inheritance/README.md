@@ -1,1 +1,0 @@
-Talent is inherited
