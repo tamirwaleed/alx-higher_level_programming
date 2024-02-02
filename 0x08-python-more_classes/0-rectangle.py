@@ -2,4 +2,5 @@
 """ Rectangle Module """
 
 class Rectangle():
+""" The class """
 	pass
