@@ -6,8 +6,8 @@ class MyInt(int):
     """ bizarro integer """
     def __eq__(self, value):
         """ changes equality """
-        return int(self) != value
+        return int(self.real) != value
 
-    def __ne__(sef, value):
+    def __ne__(self, value):
         """ changes non equality """
-        return int(self)  == value
+        return int(self.real) == value
