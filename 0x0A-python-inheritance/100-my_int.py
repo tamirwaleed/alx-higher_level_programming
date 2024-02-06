@@ -8,6 +8,6 @@ class MyInt(int):
         """ changes equality """
         return self.real != value
 
-    def __ne__(sef, vaue):
+    def __ne__(sef, value):
         """ changes non equality """
         return self.real == value
