@@ -5,9 +5,9 @@
 def pascal_triangle(n):
     ''' the function '''
     emp = [[]]
-    if n <= 0:
-        return emp
     temp1 = []
+    if n <= 0:
+        return temp1
     for i in range(n):
         temp = []
         for j in range(0, i + 1):
