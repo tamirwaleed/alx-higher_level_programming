@@ -5,11 +5,12 @@
 def append_after(filename="", search_string="", new_string=""):
     """ the function """
     with open(filename, "r+") as fd:
-        fileread = fd.readlines()
-        i = 0
-        for line in fileread:
+        lnlt = []
+        while True:
+            fileread = fd.readline()
+            if line = "":
+                break
+            lnlt.append(fileread)
             if search_string in line:
-                fileread.insert(i + 1, new_string)
-            i += 1
-        fd.seek(0)
-        return (fd.write("".join(fileread)))
+                lnlt.append(new_string)
+        fd.writelines(lnlt)
