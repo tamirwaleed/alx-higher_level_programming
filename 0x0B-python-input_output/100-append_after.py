@@ -12,4 +12,4 @@ def append_after(filename="", search_string="", new_string=""):
                 fileread.insert(i + 1, new_string)
             i += 1
         fd.seek(0)
-        fd.write("".join(fileread))
+        return (fd.write("".join(fileread)))
