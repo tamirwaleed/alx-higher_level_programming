@@ -28,7 +28,7 @@ try:
             if stcd in statuscodes:
                 statuscodes[stcd] += 1
         i += 1
-        if i > 10:
+        if i % 10 == 0:
             printstats()
     printstats()
 except KeyboardInterrupt:
