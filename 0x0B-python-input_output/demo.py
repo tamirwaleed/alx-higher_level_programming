@@ -1,15 +1,16 @@
 #!/usr/bin/python3
-""" My class module
 """
+12-main
+"""
+pascal_triangle = __import__('12-pascal_triangle').pascal_triangle
 
-class MyClass:
-    """ My class
+def print_triangle(triangle):
     """
+    Print the triangle
+    """
+    for row in triangle:
+        print("[{}]".format(",".join([str(x) for x in row])))
 
-    def __init__(self, name):
-        self.name = name
-        self.number = 0
 
-    def __str__(self):
-        return "[MyClass] {} - {:d}".format(self.name, self.number)
-
+if __name__ == "__main__":
+    print_triangle(pascal_triangle(5))
