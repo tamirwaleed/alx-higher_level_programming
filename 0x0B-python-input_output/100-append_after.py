@@ -8,7 +8,7 @@ def append_after(filename="", search_string="", new_string=""):
         i = 0
         fileread = fd.readlines()
         for line in fileread:
-            if search_string in line:
+            if line.find(search_string) is not -1:
                 fileread.insert(i + 1, new_string)
             i += 1
         fd.seek(0)
