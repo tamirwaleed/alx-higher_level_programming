@@ -7,11 +7,11 @@ def append_after(filename="", search_string="", new_string=""):
     with open(filename, "r") as fd:
         lnlt = []
         while True:
-            fileread = fd.readline()
-            if fileread = "":
+            line = fd.readline()
+            if line = "":
                 break
-            lnlt.append(fileread)
-            if search_string in fileread:
+            lnlt.append(line)
+            if search_string in line:
                 lnlt.append(new_string)
     with open(filename, "w") as fd:
         fd.writelines(lnlt)
