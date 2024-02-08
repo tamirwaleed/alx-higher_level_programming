@@ -16,7 +16,7 @@ def printstats():
     """ the function """
     print("File size: {}".format(flsz))
     for key, value in sorted(statuscodes.items()):
-        print("{}: {}".format(key, value))
+        print("{:s}: {}".format(key, value))
 
 
 try:
