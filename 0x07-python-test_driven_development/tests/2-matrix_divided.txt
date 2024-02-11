@@ -21,6 +21,11 @@ Testing matrix divide
 [[0.8, 1.6, 2.4], [3.2, 4.0, 4.8], [5.6, 6.4, 7.2]]
 >>> matrix_divided(matrix, -2.5)
 [[-0.8, -1.6, -2.4], [-3.2, -4.0, -4.8], [-5.6, -6.4, -7.2]]
+>>> m = [[2, 4, 8], [1, 2, 3]]
+>>> matrix_divided(m, 2)
+[[1.0, 2.0, 4.0], [0.5, 1.0, 1.5]]
+>>> m[1][1]
+2
 >>> matrix_divided(matrix, 0)
 Traceback (most recent call last):
 ZeroDivisionError: division by zero
