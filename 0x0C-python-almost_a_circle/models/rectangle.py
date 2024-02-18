@@ -40,7 +40,7 @@ class Rectangle(Base):
         ''' x getter '''
         return self.__x
 
-    @width.setter
+    @x.setter
     def x(self, value):
         ''' x setter '''
         self.__x = value
