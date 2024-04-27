@@ -4,21 +4,21 @@
 
 class Rectangle:
     """ the class """
-    def __init__(self, width = 0, height = 0):
+    def __init__(self, width=0, height=0):
         """ instantiation """
         self.width = width
         self.height = height
-    
+
     @property
     def height(self):
         """ getter """
         return self.__height
-    
+
     @property
     def width(self):
         """ getter """
         return self.__width
-    
+
     @height.setter
     def height(self, value):
         """ setter """
@@ -28,7 +28,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
-    
+
     @width.setter
     def width(self, value):
         """ setter """
