@@ -23,7 +23,8 @@ class Rectangle:
 
     def __repr__(self):
         """ returns a recreatable version of the object """
-        return "Rectangle(" + str(self.__width) + ', ' + str(self.__height) + ")"
+        return "Rectangle(" + str(self.__width) + \
+            ', ' + str(self.__height) + ")"
 
     @property
     def height(self):
