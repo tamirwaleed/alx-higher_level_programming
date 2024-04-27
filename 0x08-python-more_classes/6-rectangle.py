@@ -2,11 +2,11 @@
 """ The Rectangle module """
 
 
-number_of_instances = 0
-
-
 class Rectangle:
     """ the class """
+
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """ instantiation """
         self.width = width
