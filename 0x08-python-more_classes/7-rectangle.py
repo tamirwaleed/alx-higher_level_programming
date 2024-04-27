@@ -27,7 +27,7 @@ class Rectangle:
         else:
             for i in range(self.__height):
                 for j in range(self.__width):
-                    s = s + Rectangle.print_symbol
+                    s = s + str(self.print_symbol)
                 s = s + "\n"
             return s[:-1]
 
