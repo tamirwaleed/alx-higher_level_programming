@@ -8,7 +8,7 @@ class Rectangle:
         """ instantiation """
         self.width = width
         self.height = height
- 
+
     def __del__(self):
         """ farewell message """
         print("Bye rectangle...")
