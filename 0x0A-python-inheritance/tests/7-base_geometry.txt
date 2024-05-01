@@ -20,7 +20,7 @@ True
 <class '7-base_geometry.BaseGeometry'>
 >>> bg = BaseGeometry(None)
 Traceback (most recent call last):
-TypeError: object() takes no parameters
+TypeError: BaseGeometry() takes no arguments
     >>> type(bg) == BaseGeometry
     True
 
