@@ -1,10 +1,17 @@
 #!/usr/bin/python3
-is_kind_of_class = __import__('3-is_kind_of_class').is_kind_of_class
+add_attribute = __import__('101-add_attribute').add_attribute
 
-a = 1
-if is_kind_of_class(a, int):
-        print("{} comes from {}".format(a, int.__name__))
-if is_kind_of_class(a, float):
-        print("{} comes from {}".format(a, float.__name__))
-if is_kind_of_class(a, object):
-        print("{} comes from {}".format(a, object.__name__))
+class MyClass():
+        pass
+
+mc = MyClass()
+add_attribute(mc, "name", "John")
+print(mc.name)
+
+try:   
+    a = "My String"
+    add_attribute(a, "name", "Bob")
+    print(a.name)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
