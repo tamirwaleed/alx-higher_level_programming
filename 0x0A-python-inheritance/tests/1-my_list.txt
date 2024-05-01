@@ -31,38 +31,42 @@ Check appending
     [1, 2, 3, 4]
 
 Check order for already sorted
-    >>>em.print_sorted()
+    >>> em.print_sorted()
     [1, 2, 3, 4]
 
 Check for reverse
-    >>> em.append(4)
-    >>> em.append(3)
-    >>> em.append(2)
-    >>> em.append(1)
-    >>> em.print_sorted()
+    >>> em1 = MyList()
+    >>> em1.append(4)
+    >>> em1.append(3)
+    >>> em1.append(2)
+    >>> em1.append(1)
+    >>> em1.print_sorted()
     [1, 2, 3, 4]
-    >>> print(em)
+    >>> print(em1)
     [4, 3, 2, 1]
 
 Check for negative and Zeros
-    >>> em.append(4)
-    >>> em.append(-8)
-    >>> em.append(0)
-    >>> em.append(-4)
-    >>> em.print_sorted()
+    >>> em2 = MyList()
+    >>> em2.append(4)
+    >>> em2.append(-8)
+    >>> em2.append(0)
+    >>> em2.append(-4)
+    >>> em2.print_sorted()
     [-8, -4, 0, 4]
-    >>> print(em)
+    >>> print(em2)
     [4, -8, 0, -4]
 
->>> obj3.append(NULL)
+Check for NULL
+>>> em3 = MyList()
+>>> em3.append(NULL)
 Traceback (most recent call last):
     ...
 NameError: name 'NULL' is not defined
 
->>> print(obj3)
+>>> print(em3)
 []
 
->>> obj3.print_sorted()
+>>> em3.print_sorted()
 []
 
 Checking NaN object
@@ -75,6 +79,6 @@ NameError: name 'NaN' is not defined
 
 Check arguments
     >>> em.print_sorted(1)
-	Traceback (most recent call last):
-	...
-	TypeError: print_sorted() takes 1 positional argument but 2 were given
+    Traceback (most recent call last):
+    ...
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
