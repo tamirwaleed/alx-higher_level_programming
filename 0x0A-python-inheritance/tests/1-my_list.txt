@@ -54,6 +54,25 @@ Check for negative and Zeros
     >>> print(em)
     [4, -8, 0, -4]
 
+>>> obj3.append(NULL)
+Traceback (most recent call last):
+    ...
+NameError: name 'NULL' is not defined
+
+>>> print(obj3)
+[]
+
+>>> obj3.print_sorted()
+[]
+
+Checking NaN object
+>>> obj4 = MyList()
+
+>>> obj4.append(NaN)
+Traceback (most recent call last):
+    ...
+NameError: name 'NaN' is not defined
+
 Check arguments
     >>> em.print_sorted(1)
 	Traceback (most recent call last):
