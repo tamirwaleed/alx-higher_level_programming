@@ -19,6 +19,3 @@ def pascal_triangle(n):
                     lev.append(temp[j] + temp[j - 1])
             pasc.append(lev)
     return pasc[:]
-
-
-
