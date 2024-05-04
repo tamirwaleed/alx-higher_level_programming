@@ -19,5 +19,7 @@ class Student():
                     check = False
             if check:
                 return {y: getattr(self, y) for y in attrs}
+            else:
+                return self.__dict__
         else:
             return self.__dict__
