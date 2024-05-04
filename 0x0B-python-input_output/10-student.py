@@ -12,12 +12,12 @@ class Student():
 
     def to_json(self, attrs=None):
         """ returns the json representation """
-        if type(attrs) is list:
+        if type(attrs) == list:
             check = True
             for x in attrs:
                 if type(x) is not str:
                     check = False
-            if check is False:
+            if check:
                 return {y: getattr(self, y) for y in attrs}
         else:
             return self.__dict__
