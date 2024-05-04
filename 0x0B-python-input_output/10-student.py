@@ -12,7 +12,7 @@ class Student():
 
     def to_json(self, attrs=None):
         """ returns the json representation """
-        if type(attrs) == list:
+        if type(attrs) is list:
             check = True
             for x in attrs:
                 if type(x) is not str:
