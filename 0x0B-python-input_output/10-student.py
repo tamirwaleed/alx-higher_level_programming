@@ -18,7 +18,7 @@ class Student():
                 if type(x) is not str:
                     check = False
             if check:
-                return {y: getattr(self, y) for y in attrs}
+                return {y: getattr(self, y) for y in attrs if hasattr(self, y)}
             else:
                 return self.__dict__
         else:
