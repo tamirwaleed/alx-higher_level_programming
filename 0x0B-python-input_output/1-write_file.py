@@ -5,4 +5,4 @@
 def write_file(filename="", text=""):
     """ the parameters are filename and text """
     with open(filename, "w"):
-        fd.write(text)
+        return fd.write(text)
