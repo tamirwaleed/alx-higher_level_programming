@@ -1,1 +1,89 @@
-tests
+Tests for 0-add_integer.py
+==========================
+
+Importing
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> type(add_integer)
+<class 'function'>
+>>> len(__import__('0-add_integer').add_integer.__doc__) > 1
+True
+>>> add_integer(1,2)
+3
+>>> add_integer(1,0)
+1
+>>> add_integer(1,-1)
+0
+>>> add_integer(-1,-1)
+-2
+>>> add_integer(-1)
+97
+>>> add_integer(0)
+98
+>>> add_integer(1)
+99
+>>> add_integer(5.2,6.3)
+11
+>>> add_integer(5.2)
+103
+>>> add_integer(-5.2)
+93
+>>> add_integer(-5.2,-45)
+-50
+>>> add_integer('a',1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_developmen
+t/0-add_integer.py", line 10, in add_integer
+    raise TypeError("a must be an integer")
+TypeError: a must be an integer
+>>> add_integer(1,'a')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_developmen
+t/0-add_integer.py", line 12, in add_integer
+    raise TypeError("b must be an integer")
+TypeError: b must be an integer
+>>> add_integer(1,None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_developmen
+t/0-add_integer.py", line 12, in add_integer
+    raise TypeError("b must be an integer")
+TypeError: b must be an integer
+>>> add_integer(1,[1,2])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_developmen
+t/0-add_integer.py", line 12, in add_integer
+    raise TypeError("b must be an integer")
+TypeError: b must be an integer
+>>> add_integer([1,2],1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_developmen
+t/0-add_integer.py", line 10, in add_integer
+    raise TypeError("a must be an integer")
+TypeError: a must be an integer
+>>> add_integer((1,2),1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_developmen
+t/0-add_integer.py", line 10, in add_integer
+    raise TypeError("a must be an integer")
+TypeError: a must be an integer
+>>> add_integer(1,(1,2))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_developmen
+t/0-add_integer.py", line 12, in add_integer
+    raise TypeError("b must be an integer")
+TypeError: b must be an integer
+>>> add_integer()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: add_integer() missing 1 required positional argument: 'a'
+>>> add_integer(1,2,3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were gi
+ven
