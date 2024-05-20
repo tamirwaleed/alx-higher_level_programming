@@ -1,0 +1,52 @@
+
+ctest for 2-matrix_divided
+============================
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> len(matrix_divided.__doc__) > 1
+True
+>>> type(matrix_divided)
+<class 'function'>
+>>> mat = [[2,4,6],[8,10,12]]
+>>> matrix_divided(mat, 2)
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+>>> matrix_divided(mat, 4)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+>>> matrix_divided(mat, -2)
+[[-1.0, -2.0, -3.0], [-4.0, -5.0, -6.0]]
+>>> matrix_divided(mat, 0)
+Traceback (most recent call last):
+    raise ZeroDivisionError("division by zero")
+ZeroDivisionError: division by zero
+>>> matrix_divided(mat, None)
+Traceback (most recent call last):
+    raise TypeError("div must be a number")
+TypeError: div must be a number
+>>> matrix_divided(mat, float('inf'))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+>>> matrix_divided(mat, float('nan'))
+[[nan, nan, nan], [nan, nan, nan]]
+>>> mat2 = []
+>>> matrix_divided(mat2, 2)
+[]
+>>> mat2 = [[1], [2,3]]
+>>> matrix_divided(mat2, 2)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+>>> mat2 = [[2.4,1.2],[4.8,9.6]]
+>>> matrix_divided(mat2, 2)
+[[1.2, 0.6], [2.4, 4.8]]
+>>> mat2 = [(1,3), [1,2]]
+>>> matrix_divided(mat2, 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> mat2 = [[2,1], ["a","b"]]
+>>> matrix_divided(mat2, 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> mat2 = [[], []]
+>>> matrix_divided(mat2, 2)
+[[], []]
+>>> mat2 = [[-2,-4], [-6,-8]]
+>>> matrix_divided(mat2, 2)
+[[-1.0, -2.0], [-3.0, -4.0]]
