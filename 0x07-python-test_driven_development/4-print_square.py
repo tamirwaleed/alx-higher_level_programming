@@ -9,8 +9,3 @@ def print_square(size):
     if size < 0:
         raise ValueError("size must be >= 0")
     print((("#" * size + "\n") * size), end="")
-    sq = ""
-    for i in range(size):
-        sq += "#" * size
-        sq += "\n"
-    print(sq[:-2])
