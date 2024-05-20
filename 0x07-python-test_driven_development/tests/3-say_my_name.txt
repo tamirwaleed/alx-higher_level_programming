@@ -10,11 +10,11 @@ True
 >>> say_my_name("Tamir", "El-Waleed")
 My name is Tamir El-Waleed
 >>> say_my_name("Tamir")
-My name is Tamir
+My name is Tamir 
 >>> say_my_name("", "El-Waleed")
 My name is  El-Waleed
 >>> say_my_name("Tamir", "")
-My name is Tamir
+My name is Tamir 
 >>> say_my_name("Tamir", 2)
 Traceback (most recent call last):
 TypeError: last_name must be a string
@@ -37,4 +37,4 @@ TypeError: last_name must be a string
 Traceback (most recent call last):
 TypeError: last_name must be a string
 >>> say_my_name(" ", " ")
-My name is
+My name is    
