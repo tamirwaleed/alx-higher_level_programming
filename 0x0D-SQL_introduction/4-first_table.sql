@@ -1,5 +1,6 @@
 -- creates table
-CREATE TABLE if not exists first_table(
+DROP TABLE if exists firsts_table;
+CREATE TABLE first_table(
 	id INT,
 	name VARCHAR(256);
 	)
