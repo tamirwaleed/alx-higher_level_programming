@@ -8,8 +8,9 @@ CREATE TABLE second_table(
 );
 
 INSERT INTO second_table
-(id, name, score)
-	VALUES(1, "John", 10),
-	VALUES(2, "ALex", 3),
-	VALUES(3, "Bob", 14),
-	VALUES(4, "Geoge", 8);
+	(id, name, score)
+VALUES
+(1, "John", 10),
+(2, "ALex", 3),
+(3, "Bob", 14),
+(4, "Geoge", 8);
