@@ -1,2 +1,2 @@
--- creates the database hbtn_0c_0
+-- Deletes the database
 DROP DATABASE if exists hbtn_0c_0;

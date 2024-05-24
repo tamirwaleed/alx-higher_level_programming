@@ -1,2 +1,2 @@
--- reads all databases
+-- shows all tables
 SHOW TABLES
