@@ -1,7 +1,5 @@
 -- 2nd table
-DROP TABLE if exists second_table;
-
-CREATE TABLE second_table(
+CREATE TABLE if not exists second_table(
 	id INT,
 	name VARCHAR(256),
 	score INT
