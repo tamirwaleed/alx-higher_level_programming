@@ -1,2 +1,2 @@
 -- reads all databases
-SELECT * from mysql
+SHOW DATABASES
