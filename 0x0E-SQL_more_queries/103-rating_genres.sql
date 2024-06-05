@@ -1,7 +1,7 @@
 -- creates table
 SELECT
 	tv_genres.name,
-	SUM(tv_show_ratings.rate) as rating
+	SUM(tv_show_ratings.rate) AS rating
 FROM
 	tv_show_ratings
 INNER JOIN 
