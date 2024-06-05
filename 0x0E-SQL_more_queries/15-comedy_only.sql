@@ -1,6 +1,6 @@
 -- creates table
 SELECT
-	tv_shows.title AS titles
+	tv_shows.title AS title
 FROM
 	tv_shows
 INNER JOIN 
