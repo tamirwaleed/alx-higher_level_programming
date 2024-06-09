@@ -54,13 +54,3 @@ class Rectangle(Base):
     def y(self, value):
         """ setter """
         self.__y = value
-
-    @property
-    def width(self):
-        """ getter """
-        return self.__width
-
-    @width.setter
-    def width(self, value):
-        """ setter """
-        self.__width = value
