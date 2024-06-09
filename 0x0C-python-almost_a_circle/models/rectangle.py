@@ -13,7 +13,7 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-        super().__init__
+        super().__init__(id)
 
     def set_width(self, width):
         """ setter """
@@ -31,7 +31,7 @@ class Rectangle(Base):
         """ getter """
         return self.__height
 
-    def set_xself, x):
+    def set_x(self, x):
         """ setter """
         self.__x = x
 
@@ -44,5 +44,5 @@ class Rectangle(Base):
         self.__y = y
 
     def get_y(self):
-        """ getter """                                                          
+        """ getter """
         return self.__y
