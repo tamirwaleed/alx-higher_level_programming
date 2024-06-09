@@ -15,34 +15,52 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-    def set_width(self, width):
-        """ setter """
-        self.__width = width
-
-    def get_width(self):
+    @property
+    def width(self):
         """ getter """
         return self.__width
 
-    def set_height(self, height):
+    @width.setter
+    def width(self, value):
         """ setter """
-        self.__height = height
+        self.__width = value
 
-    def get_height(self):
+    @property
+    def height(self):
         """ getter """
         return self.__height
 
-    def set_x(self, x):
+    @height.setter
+    def height(self, value):
         """ setter """
-        self.__x = x
+        self.__height = value
 
-    def get_x(self):
+    @property
+    def x(self):
         """ getter """
         return self.__x
 
-    def set_y(self, y):
+    @x.setter
+    def x(self, value):
         """ setter """
-        self.__y = y
+        self.__x = value
 
-    def get_y(self):
+    @property
+    def y(self):
         """ getter """
         return self.__y
+
+    @y.setter
+    def y(self, value):
+        """ setter """
+        self.__y = value
+
+    @property
+    def width(self):
+        """ getter """
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """ setter """
+        self.__width = value
