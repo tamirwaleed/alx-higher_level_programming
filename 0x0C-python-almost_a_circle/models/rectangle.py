@@ -77,8 +77,12 @@ class Rectangle(Base):
 
     def display(self):
         """ prints the rectangle """
+        for k in range(self.__y):
+            print("\n)"
         for i in range(self.__height):
             line = ""
+            for z in range(self.__x):
+                line += " "
             for j in range(self.__width):
                 line += "#"
             print(line)
