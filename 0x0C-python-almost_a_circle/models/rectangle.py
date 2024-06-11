@@ -15,6 +15,9 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
+    def area(self):
+        """ returns the area """
+        return self.__width * self__height
     @property
     def width(self):
         """ getter """
