@@ -85,6 +85,7 @@ class Rectangle(Base):
                 self.__x = arg
             elif i == 4:
                 self.__y = arg
+            i = i + 1
 
     def area(self):
         """ returns the area """
