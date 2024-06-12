@@ -3,6 +3,7 @@
 
 
 from models.base import Base
+import json
 
 
 class Rectangle(Base):
@@ -117,4 +118,8 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """ returns the dict representation """
-        return self.__dict__
+        return {'x': getattr(self, "x"),
+                'y': getattr(self, "y"),
+                'id': getattr(self, "id"),
+                'height': getattr(self, "height"),
+                'width': getattr(self, "width")}
