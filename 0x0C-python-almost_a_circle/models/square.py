@@ -11,7 +11,7 @@ class Square(Rectangle):
         """ Instantization """
         super().__init__(size, size, x, y, id)
 
-  def update(self, *args, **kwargs):
+    def update(self, *args, **kwargs):
         """ assigns values to arguments """
         if len(args) != 0:
             i = 0
@@ -19,13 +19,11 @@ class Square(Rectangle):
                 if i == 0:
                     self.id = arg
                 elif i == 1:
-                    self.__width = arg
+                    self.size = arg
                 elif i == 2:
-                    self.__height = arg
+                    self.x = arg
                 elif i == 3:
-                    self.__x = arg
-                elif i == 4:
-                    self.__y = arg
+                    self.y = arg
                 else:
                     break
                 i += 1
