@@ -71,9 +71,9 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ assigns values to arguments """
-        if args is not None:
+        if len(args) != 0:
             i = 0
             for arg in args:
                 if i == 0:
@@ -86,10 +86,12 @@ class Rectangle(Base):
                     self.__x = arg
                 elif i == 4:
                     self.__y = arg
-               i = i + 1
+                else:
+                    break
+                i += 1
         else:
-            for key, value in kwargs.iteritems():
-                self.key = value
+            for key, value in kwargs.items():
+                self.__setattr__(key, value)
 
     def area(self):
         """ returns the area """
