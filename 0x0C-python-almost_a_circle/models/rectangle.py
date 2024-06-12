@@ -73,19 +73,23 @@ class Rectangle(Base):
 
     def update(self, *args):
         """ assigns values to arguments """
-        i = 0
-        for arg in args:
-            if i == 0:
-                self.id = arg
-            elif i == 1:
-                self.__width = arg
-            elif i == 2:
-                self.__height = arg
-            elif i == 3:
-                self.__x = arg
-            elif i == 4:
-                self.__y = arg
-            i = i + 1
+        if args is not None:
+            i = 0
+            for arg in args:
+                if i == 0:
+                    self.id = arg
+                elif i == 1:
+                    self.__width = arg
+                elif i == 2:
+                    self.__height = arg
+                elif i == 3:
+                    self.__x = arg
+                elif i == 4:
+                    self.__y = arg
+               i = i + 1
+        else:
+            for key, value in kwargs.iteritems():
+                self.key = value
 
     def area(self):
         """ returns the area """
