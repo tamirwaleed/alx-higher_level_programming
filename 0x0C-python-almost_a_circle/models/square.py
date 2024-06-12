@@ -11,6 +11,28 @@ class Square(Rectangle):
         """ Instantization """
         super().__init__(size, size, x, y, id)
 
+  def update(self, *args, **kwargs):
+        """ assigns values to arguments """
+        if len(args) != 0:
+            i = 0
+            for arg in args:
+                if i == 0:
+                    self.id = arg
+                elif i == 1:
+                    self.__width = arg
+                elif i == 2:
+                    self.__height = arg
+                elif i == 3:
+                    self.__x = arg
+                elif i == 4:
+                    self.__y = arg
+                else:
+                    break
+                i += 1
+        else:
+            for key, value in kwargs.items():
+                self.__setattr__(key, value)
+    
     @property
     def size(self):
         """ getter """
