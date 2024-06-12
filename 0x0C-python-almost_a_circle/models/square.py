@@ -47,3 +47,10 @@ class Square(Rectangle):
         line1 = "[Square] ({}) {}/{}".format(self.id, self.x, self.y)
         line1 += " - {}".format(self.width)
         return line1
+
+    def to_dictionary(self):
+        """ returns the dict representation """
+        return {'id': getattr(self, "id"),
+                'x': getattr(self, "x"),
+                'size': getattr(self, "size"),
+                'y': getattr(self, "y")}
