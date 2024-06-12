@@ -22,7 +22,4 @@ class Base:
         if list_dictionaries == None or len(list_dictionaries) == 0:
             return "[]"
         else:
-            result = "["
-            for x in list_dictionaries:
-                result += json.dumps(x)
-            return result + "]"
+            return json.dumps(list_dictionaries)
