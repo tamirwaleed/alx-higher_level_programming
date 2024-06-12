@@ -31,5 +31,5 @@ class Square(Rectangle):
     def __str__(self):
         """ returns string represenation """
         line1 = "[Square] ({}) {}/{}".format(self.id, self.x, self.y)
-        line1 += " - {}".format(self.width)
+        line1 += " - {}".format(self.size)
         return line1
