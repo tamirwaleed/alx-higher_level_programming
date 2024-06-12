@@ -114,3 +114,7 @@ class Rectangle(Base):
         line1 = "[Rectangle] ({}) {}/{}".format(self.id, self.x, self.y)
         line1 += " - {}/{}".format(self.width, self.height)
         return line1
+
+    def to_dictionary(self):
+        """ returns the dict representation """
+        return self.__dict__
