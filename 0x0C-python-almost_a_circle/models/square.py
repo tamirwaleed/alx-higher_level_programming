@@ -30,7 +30,7 @@ class Square(Rectangle):
         else:
             for key, value in kwargs.items():
                 self.__setattr__(key, value)
-    
+
     @property
     def size(self):
         """ getter """
