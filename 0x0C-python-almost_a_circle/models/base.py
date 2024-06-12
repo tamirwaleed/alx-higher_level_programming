@@ -23,3 +23,22 @@ class Base:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """ returns a list of instances """
+        filename = cls.__name__ + ".json"
+        my_list = []
+        if list_objs is None:
+            pass
+        else:
+            for obj in list_objs:
+                elem = {'x': getattr(obj, "x"),
+                        'y': getattr(obj, "y"),
+                        'id': getattr(obj, "id"),
+                        'height': getattr(obj, "height"),
+                        'width': getattr(obj, "width")}
+                my_list.append(elem)
+        with open(filename, "w") as fd:
+            new_list = Base.to_json_string(my_list)
+            return json.dump(new_list, fd)
