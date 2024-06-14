@@ -59,4 +59,5 @@ class Base:
             dummy_inst = Rectangle(1, 1)
         else:
             dummy_inst = Square(1)
-        return dummy_inst.update(**dictionary)
+        dummy_inst.update(**dictionary)
+        return dummy_inst
