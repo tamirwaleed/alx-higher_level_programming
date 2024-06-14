@@ -50,6 +50,22 @@ class Base:
             return json.loads(json_string)
 
     @classmethod
+    def load_from_file(cls):
+        """ loads list from file """
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as fd:
+                my_list = fd.read()
+                inst_list = Base.from_json_string(my_list)
+        except:
+            return []
+        values = []
+        for val in inst_list:
+            dummy = cls.create(**val)
+            values.append(dummy)
+        return values
+
+    @classmethod
     def create(cls, **dictionary):
         """ returns an instance with attributes set """
         from models.rectangle import Rectangle
