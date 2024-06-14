@@ -57,7 +57,7 @@ class Base:
             with open(filename, "r") as fd:
                 my_list = fd.read()
                 inst_list = Base.from_json_string(my_list)
-        except:
+        except Exception:
             return []
         values = []
         for val in inst_list:
