@@ -48,3 +48,15 @@ class Base:
             return my_list
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ returns an instance with attributes set """
+        from models.rectangle import Rectangle
+        from models.square import Square
+
+        if cls.__name__ == "Rectangle":
+            dummy_inst = Rectangle(1, 1)
+        else:
+            dummy_inst = Square(1)
+        return dummy_inst.update(**dictionary)
