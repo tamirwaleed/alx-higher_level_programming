@@ -39,3 +39,12 @@ class Base:
             json_list = Base.to_json_string(my_list)
             new_list = json.loads(json_list)
             return json.dump(new_list, fd)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ returns list of json string """
+        my_list = []
+        if json_string is None or len(json_string) == 0:
+            return my_list
+        else:
+            return json.loads(json_string)
