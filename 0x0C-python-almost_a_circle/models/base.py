@@ -3,6 +3,7 @@
 
 
 import json
+import csv
 
 
 class Base:
@@ -77,3 +78,44 @@ class Base:
             dummy_inst = Square(1)
         dummy_inst.update(**dictionary)
         return dummy_inst
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ saves to csv """
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w", newline='') as fd:
+            write_obj = csv.writer(fd, delimiter= " ")
+            if cls.__name__ == "Rectangle":
+                for elem in list_objs:
+                    row = ""
+                    elem = elem.to_dictionary()
+                    row += str(elem["id"]) + "," +
+                           str(elem["width"]) + "," +
+                           str(elem["height"]) + "," +
+                           str(elem["x"]) + "," +
+                           str(elem["y"])
+                    write_obj.writerow(row)
+            elif cls.__name__ == "Square":
+                for elem in list_objs:
+                    row = ""
+                    elem = elem.to_dictionary()
+                    row += str(elem["id"]) + "," +
+                           str(elem["size"]) + "," +
+                           str(elem["x"]) + "," +
+                           str(elem["y"])
+                    write_obj.writerow(row)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ loads list from file """
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as fd:
+                my_list = fd.read()
+                inst_list = Base.from_json_string(my_list)
+        except Exception:
+            return []
+        values = []
+        for val in inst_list:
+            dummy = cls.create(**val)
+            values.append(dummy)
