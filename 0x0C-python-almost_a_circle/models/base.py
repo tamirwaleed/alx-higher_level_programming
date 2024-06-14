@@ -33,12 +33,9 @@ class Base:
             pass
         else:
             for obj in list_objs:
-                elem = {'x': getattr(obj, "x"),
-                        'y': getattr(obj, "y"),
-                        'id': getattr(obj, "id"),
-                        'height': getattr(obj, "height"),
-                        'width': getattr(obj, "width")}
+                elem = obj.to_dictionary()
                 my_list.append(elem)
         with open(filename, "w") as fd:
-            new_list = Base.to_json_string(my_list)
+            json_list = Base.to_json_string(my_list)
+            new_list = json.loads(json_list)
             return json.dump(new_list, fd)
