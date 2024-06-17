@@ -89,34 +89,35 @@ class Base:
                 for elem in list_objs:
                     row = ""
                     elem = elem.to_dictionary()
-                    row += str(elem["id"]) + "," +
-                           str(elem["width"]) + "," +
-                           str(elem["height"]) + "," +
-                           str(elem["x"]) + "," +
-                           str(elem["y"])
+                    row += (str(elem["id"]) + "," +
+                        str(elem["width"]) + "," +
+                        str(elem["height"]) + "," +
+                        str(elem["x"]) + "," +
+                        str(elem["y"]))
                     write_obj.writerow(row)
             elif cls.__name__ == "Square":
                 for elem in list_objs:
                     row = ""
                     elem = elem.to_dictionary()
-                    row += str(elem["id"]) + "," +
-                           str(elem["size"]) + "," +
-                           str(elem["x"]) + "," +
-                           str(elem["y"])
+                    row += (str(elem["id"]) + "," +
+                        str(elem["size"]) + "," +
+                        str(elem["x"]) + "," +
+                        str(elem["y"]))
                     write_obj.writerow(row)
 
     @classmethod
     def load_from_file_csv(cls):
        filename = cls.__name__ + ".csv"
-        try:
-            with open(filename, "r", newline="") as csvfile:
-                if cls.__name__ == "Rectangle":
-                    fieldnames = ["id", "width", "height", "x", "y"]
-                else:
-                    fieldnames = ["id", "size", "x", "y"]
-                list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
-                list_dicts = [dict([k, int(v)] for k, v in d.items())
-                              for d in list_dicts]
-                return [cls.create(**d) for d in list_dicts]
-        except IOError:
-            return []
+       try:
+           with open(filename, "r", newline="") as csvfile:
+               if cls.__name__ == "Rectangle":
+                   fieldnames = ["id", "width", "height", "x", "y"]
+               else:
+                   fieldnames = ["id", "size", "x", "y"]
+               list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
+               list_dict = []
+               for elem in list_dicts:
+                   list_dict.append([dict([k, int(v)] for k, v in elem.items())
+               return [cls.create(**d) for d in list_dict]
+       except IOError:
+           return []
