@@ -109,3 +109,30 @@ class Base:
                                  "x": row[2], "y": row[3]}
                 result.append(cls.create(**dict_objs))
         return result
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """ Draws all rectangles and squares """
+        import turtle
+        import time
+        import random.randrange
+        turtle.Screen().colormode(255)
+        for objs in list_rectangles + list_squares:
+            curs = turtle.Turtle()
+            curs.color((randrange(255), randrange(255), randrange(255)))
+            curs.pensize(2)
+            curs.penup()
+            curse.pendown()
+            curs.setpos((i.x + curs.pos()[0], i.y - curs.pos()[1]))
+            curs.pensize(15)
+            curs.forward(i.width)
+            curs.left(90)
+            curs.forward(i.height)
+            curs.left(90)
+            curs.forward(i.width)
+            curs.left(90)
+            curs.forward(i.height
+            curs.left(90)
+            curs.end_fill()
+
+        time.sleep(4)
