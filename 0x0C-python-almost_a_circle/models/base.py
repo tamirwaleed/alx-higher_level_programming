@@ -103,8 +103,9 @@ class Base:
                 row = [int(r) for r in row]
                 if cls.__name__ == "Rectangle":
                     dict_objs = {"id": row[0], "width": row[1],
-                                "height": row[2], "x": row[3], "y": row[4]}
+                                 "height": row[2], "x": row[3], "y": row[4]}
                 elif cls.__name__ == "Square":
                     dict_objs = {"id": row[0], "size": row[1],
                                  "x": row[2], "y": row[3]}
                 result.append(cls.create(**dict_objs))
+        return result
