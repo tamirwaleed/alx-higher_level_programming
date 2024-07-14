@@ -9,7 +9,7 @@ function secondBig () {
     for (let j = 2; j < process.argv.length; j++) {
       a = process.argv[j];
       if (a > i) {
-	b = i;
+        b = i;
         i = a;
       } else if (a < i && a > b) {
         b = a;
