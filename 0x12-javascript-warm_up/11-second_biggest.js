@@ -1,7 +1,7 @@
 #!/usr/bin/node
 function secondBig () {
-  if (process.argv.length < 3) {
-    console.log(0);
+  if (process.argv.length < 4) {
+    return 0;
   } else {
     let i = process.argv[2];
     let a;
