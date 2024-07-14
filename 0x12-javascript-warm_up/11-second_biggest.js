@@ -1,25 +1,25 @@
 #!/usr/bin/node
 function secondBig () {
-  if (process.argv.length < 3) {
-    console.log(0);
+  if (process.argv.length < 4) {
+    return 0;
   } else {
-      let i = process.argv[2];
-      let a;
-      let b;
-      for (let j = 2; j < process.argv.length; j++) {
-        a = process.argv[j];
-        if (a > i) {
-          i = process.argv[j];
-        }
-      }
-      b = process.argv[2];
-      for (j = 2; j < process.argv.length; j++) {
-        a = process.argv[j];
-        if (a < i && a > b) {
-          b = process.argv[j];
+    let i = parseInt(process.argv[2]);
+    let a;
+    let b;
+    for (let j = 2; j < process.argv.length; j++) {
+      a = parseInt(process.argv[j]);
+      if (a > i) {
+        i = a;
       }
     }
-      return b;
+    b = process.argv[2];
+    for (let j = 2; j < process.argv.length; j++) {
+      a = parseInt(process.argv[j]);
+      if (a < i && a > b) {
+        b = a;
+      }
+    }
+    return b;
   }
 }
 console.log(secondBig());
