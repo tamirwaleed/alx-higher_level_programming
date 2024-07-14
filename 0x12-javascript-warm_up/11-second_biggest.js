@@ -5,14 +5,13 @@ function secondBig () {
   } else {
     let i = parseInt(process.argv[2]);
     let a;
-    let b;
+    let b = parseInt(process.argv[3]);
     for (let j = 2; j < process.argv.length; j++) {
       a = parseInt(process.argv[j]);
       if (a > i) {
         i = a;
       }
     }
-    b = process.argv[2];
     for (let j = 2; j < process.argv.length; j++) {
       a = parseInt(process.argv[j]);
       if (a < i && a > b) {
