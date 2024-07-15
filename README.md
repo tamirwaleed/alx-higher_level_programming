@@ -1,1 +1,1 @@
-LEARNING PYTHON YES!!!!!!!
+More Javascript scripts :)
