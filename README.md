@@ -1,1 +1,1 @@
-More Javascript scripts :)
+LEARNING PYTHON AND JAVASCRIPT
