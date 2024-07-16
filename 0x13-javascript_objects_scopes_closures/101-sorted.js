@@ -7,4 +7,4 @@ for (const N in myDict) {
 		        }
 	    newDict[myDict[N]].push(N);
 }
-console.log(Dictn);
+console.log(newDict);
