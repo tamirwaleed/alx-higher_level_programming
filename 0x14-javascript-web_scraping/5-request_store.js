@@ -9,10 +9,10 @@ request(url, (error, response, body) => {
     console.log('error:', error);
   } else {
     const content = console.log(JSON.parse(body));
+    try {
+      fs.writeFileSync(filepath, content, 'utf8');
+    } catch (err) {
+      console.error(err);
+    }
   }
 });
-try {
-  fs.writeFileSync(filepath, content, 'utf8');
-} catch (err) {
-  console.error(err);
-};
