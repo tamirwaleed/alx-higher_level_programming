@@ -2,7 +2,6 @@
 
 const request = require('request');
 const url = process.argv[2];
-let counter = 0;
 const finale = {};
 request(url, (error, response, body) => {
   if (error) {
@@ -12,21 +11,11 @@ request(url, (error, response, body) => {
     let userId = 10;
     for (let i = 0; i < results.length; i++) {
       if (results[i].completed) {
-        if (finale[results[i].userId.toString()] === userId) {
-          counter++;
-        } else if (finale[results[i].userId.toString()] !== userId) {
-          finale[userId] = counter;
-          userId = results[i].userId;
-          if (userId in finale) {
-            finale[userId] += 1;
-            counter = finale[userId];
+        if (finale[results[i].userId]) {
+          finale[results[i].userId]++;
           } else {
-            finale[userId] = 1;
-            counter = 1;
+            finale[results[i].userId] = 1;
           }
-        } else if ((results[i].userId.toString() in finale) === false) {
-          finale[userId] = 1;
-          counter++;
         }
       }
     }
