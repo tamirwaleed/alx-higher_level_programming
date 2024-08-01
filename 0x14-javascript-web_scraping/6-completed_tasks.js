@@ -17,8 +17,14 @@ request(url, (error, response, body) => {
         } else if (finale[results[i].userId] !== userId) {
           finale[userId] = counter;
           userId = results[i].userId;
-          counter = 0;
-        } else {
+	  if (userId in finale) {
+            finale[userId] += 1;
+            counter = finale[userId];
+	  } else {
+            finale[userId] = 1;
+            counter = 1;
+          }
+        } else if ((results[i].userId in finale) === false) {
           finale[userId] = 1;
           counter++;
         }
