@@ -12,9 +12,9 @@ request(url, (error, response, body) => {
     let userId = 10;
     for (let i = 0; i < results.length; i++) {
       if (results[i].completed) {
-        if (finale[results[i].userId] === userId) {
+        if (finale[results[i].userId.toString()] === userId) {
           counter++;
-        } else if (finale[results[i].userId] !== userId) {
+        } else if (finale[results[i].userId.toString()] !== userId) {
           finale[userId] = counter;
           userId = results[i].userId;
           if (userId in finale) {
@@ -24,7 +24,7 @@ request(url, (error, response, body) => {
             finale[userId] = 1;
             counter = 1;
           }
-        } else if ((results[i].userId in finale) === false) {
+        } else if ((results[i].userId.toString() in finale) === false) {
           finale[userId] = 1;
           counter++;
         }
