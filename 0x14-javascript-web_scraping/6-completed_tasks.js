@@ -11,7 +11,7 @@ request(url, (error, response, body) => {
     const results = JSON.parse(body);
     let userId = results[0].userId;
     for (let i = 0; i < results.length; i++) {
-      if (results[i].completed) {
+      if (results[i].completed === true) {
         if (finale[results[i].userId] === userId) {
           counter++;
         } else if (finale[results[i].userId] !== userId) {
