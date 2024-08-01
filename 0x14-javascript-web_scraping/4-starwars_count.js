@@ -3,7 +3,7 @@
 const request = require('request');
 const url = process.argv[2];
 let counter = 0;
-const wedge = 'https://swapi-api.alx-tools.com/api/people/18'
+const wedge = "https://swapi-api.alx-tools.com/api/people/18/"
 request(url, (error, response, body) => {
   if (error) {
     console.log('error:', error);
