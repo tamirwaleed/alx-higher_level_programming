@@ -10,7 +10,7 @@ request(url, (error, response, body) => {
   } else {
     const results = JSON.parse(body).results;
     for (let i = 0; i < results.length; i++) {
-      if (results[i].characters.includes(wedge)) {
+      if (results[i].characters[:-3] == '18/') {
         counter++;
       }
     }
