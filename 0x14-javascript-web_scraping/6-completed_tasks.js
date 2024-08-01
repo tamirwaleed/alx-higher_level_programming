@@ -8,7 +8,6 @@ request(url, (error, response, body) => {
     console.log('error:', error);
   } else {
     const results = JSON.parse(body);
-    const userId = 10;
     for (let i = 0; i < results.length; i++) {
       if (results[i].completed) {
         if (finale[results[i].userId]) {
