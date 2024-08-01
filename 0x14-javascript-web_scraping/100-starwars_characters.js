@@ -6,7 +6,7 @@ request(url, (error, response, body) => {
   if (error) {
     console.log('error:', error);
   } else {
-    const chars = JSON.parse(body).characters);
+    const chars = JSON.parse(body).characters;
     console.log(chars);
   }
 });
