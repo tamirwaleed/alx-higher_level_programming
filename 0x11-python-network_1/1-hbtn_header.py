@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""X-Request-Id variable found in the header of the response"""
+'''X-Request-Id variable found in the header of the response'''
 
 
 import sys
