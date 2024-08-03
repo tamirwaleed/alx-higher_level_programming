@@ -2,6 +2,7 @@
 '''X-Request-Id variable found in the header of the response'''
 
 import requests
+import sys
 
 
 if __name__ == "__main__":
