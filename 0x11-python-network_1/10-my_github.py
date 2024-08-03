@@ -10,6 +10,6 @@ if __name__ == "__main__":
     username = sys.argv[1]
     pswd = sys.argv[2]
     url = 'https://api.github.com/user/' + str(username)
-    r = requests.get(url,
+    r = requests.post(url,
                      auth=HTTPBasicAuth(username, pswd))
     print(r.json().get('id'))
