@@ -6,7 +6,7 @@ and displays the response body'''
 import sys
 import urllib.parse
 import urllib.request
-import urllib.error.HTTPError
+import urllib.error
 
 
 if __name__ == "__main__":
