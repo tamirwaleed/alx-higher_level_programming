@@ -13,8 +13,8 @@ if __name__ == "__main__":
         data = {'q': ""}
     r = requests.post(url, data={'q': sys.argv[2]})
     try:
-    r.json()
-    print("[{}] {}".format(r.headers.get('id'), r.headers.get('name')))
+        r.json()
+        print("[{}] {}".format(r.headers.get('id'), r.headers.get('name')))
     except:
         if r.status_code == 204:
             print("No result")
