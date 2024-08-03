@@ -8,10 +8,9 @@ import sys
 if __name__ == "__main__":
     url = 'http://0.0.0.0:5000/search_user'
     if len(sys.argv) == 2:
-        data = {'q': sys.argv[1]}
+        r = requests.post(url, data={'q': sys.argv[1]})
     else:
-        data = {'q': ""}
-    r = requests.post(url, data={'q': sys.argv[1]})
+        r = requests.post(url, data={'q': ""})
     try:
         r.json()
         print("[{}] {}".format(r.headers.get('id'), r.headers.get('name')))
