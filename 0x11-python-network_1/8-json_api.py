@@ -12,7 +12,7 @@ if __name__ == "__main__":
     else:
         r = requests.post(url, data={'q': ""})
     try:
-        r.json()
+        r = r.json()
         if r.status_code == 204:
             print("No result")
         else:
