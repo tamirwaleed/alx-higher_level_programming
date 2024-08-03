@@ -18,4 +18,4 @@ if __name__ == "__main__":
         if r.status_code == 204:
             print("No result")
         else:
-        print("Not a valid JSON")
+            print("Not a valid JSON")
