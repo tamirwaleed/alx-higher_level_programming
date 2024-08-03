@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-'''Sends a POST request to an email'''
+'''Log into GitHub'''
 
 import requests
-import requests.auth
+from requests.auth import HTTPBasicAuth
 import sys
 
 
