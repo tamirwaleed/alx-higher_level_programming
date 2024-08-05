@@ -14,5 +14,7 @@ if __name__ == "__main__":
     cur = con.cursor()
     cur.execute("SELECT * FROM states")
     results = cur.fetchall()
+    for i in results:
+        print(i)
     cur.close()
     con.close()
