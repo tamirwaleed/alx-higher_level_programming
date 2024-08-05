@@ -14,7 +14,7 @@ if __name__ == "__main__":
     cur = con.cursor()
     cur.execute("SELECT * \
                 FROM states \
-                WHERE name like 'N%' \
+                WHERE name like BINARY 'N%' \
                 ORDER BY id")
     results = cur.fetchall()
     for i in results:
